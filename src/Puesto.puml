@@ -1,0 +1,11 @@
+@startuml
+:Ciudadano: as ciudadano
+:Ciudadano extranjero: as extranjero
+
+usecase "Tomar huellas" as tomar
+usecase "Registrar entrada" as registrar
+extranjero --|> ciudadano
+ciudadano -- registrar
+extranjero -- tomar
+tomar ..> registrar :: <<extends>>
+@enduml

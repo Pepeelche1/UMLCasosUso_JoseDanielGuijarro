@@ -1,0 +1,17 @@
+@startuml
+:Usuario: as u
+usecase "Identificarse" as identificarse
+usecase "Pagar" as pagar
+usecase "Elegir mensajero" as elegir
+usecase "Confirmar" as confirmar
+usecase "Registrarse" as registrarse
+usecase "Pagar con tarjeta" as tarjeta
+usecase "Pagar con transferencia" as tranferencia
+u -- pagar
+u -- identificarse
+u -- elegir
+u -- confirmar
+tarjeta --|> pagar
+tranferencia --|> pagar
+identificarse .. registrarse : <<extend>>
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+:Usuario: as u
+:Administrador: as ad
+usecase "Iniciar sesion" as login
+usecase "Cerrar sesion" as logout
+usecase "Modificar contraseña" as modificar
+usecase "Recuperar contraseña" as recuperar
+usecase "Registrar usario" as registrar
+usecase "Instalar programa" as install
+ad --> u
+
+u-- login
+u -- recuperar
+u -- modificar
+u -- logout
+
+ad -- registrar
+ad -- install
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+:Cliente: as c
+usecase "Meter dinero" as meter
+usecase "Cancelar" as cancelar
+usecase "Pedir azucar" as azucar
+usecase "Pedir producto" as pedir
+usecase "Devolver dinero" as devolver
+c -- pedir
+c -- cancelar
+c -- azucar
+c -- meter
+cancelar .. devolver : <<include>>
+pedir .. devolver : <<include>>
+@enduml
